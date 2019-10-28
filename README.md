@@ -1,5 +1,5 @@
 # macOS on Thinkpad X1 Carbon 6th Gen 2018, 20KG*
-[![release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/daliansky/XiaoMi-Pro/releases)
+[![release](https://img.shields.io/badge/download-release-blue.svg)](https://github.com/zhtengw/EFI-for-X1C6-hackintosh/releases)
 
 ## My hardware configuration
 | Name                | Specifications | Funtional or not |
