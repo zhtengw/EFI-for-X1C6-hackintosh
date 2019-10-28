@@ -62,7 +62,7 @@
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>ShowPicker</key>
-			<false/>
+			<true/>
 			<key>HibernateMode</key>
 			<string>None</string>
 			<key>ConsoleBehaviourOs</key>

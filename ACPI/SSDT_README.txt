@@ -4,7 +4,7 @@ SSDT-Keyboard-X!C6.aml	Thinkpad Clickpad and keyboard hotkeys(See detail in #1 k
 SSDT-PLUG.aml		Plugin Type 1 to enable XCPM
 SSDT-PNLF.aml		LCD brightness control
 SSDT-SBUS.aml		Recognize SMBus
-SSDT-SLPWAK-X1C6.aml	Sleep and Wake(affect the behavior of LID, LED on LOGO, solved wakeup immediately; need _PTS, _WAK, GPRW renamed)
+SSDT-SLPWAK-X1C6.aml	Sleep and Wake(affect the behavior of LID, LED on LOGO, solved wake up immediately; need _PTS, _WAK, GPRW renamed)
 
 
 #1 keyboard hotkey:
