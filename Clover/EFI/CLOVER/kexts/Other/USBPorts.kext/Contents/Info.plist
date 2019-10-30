@@ -115,6 +115,28 @@
 			<key>model</key>
 			<string>MacBookPro14,1</string>
 		</dict>
+		<key>MacBookPro14,1</key>
+		<dict>
+			<key>CFBundleIdentifier</key>
+			<string>com.apple.driver.AppleUSBHostMergeProperties</string>
+			<key>IOClass</key>
+			<string>AppleUSBHostMergeProperties</string>
+			<key>IOProviderClass</key>
+			<string>AppleBusPowerController</string>
+			<key>IOProviderMergeProperties</key>
+			<dict>
+				<key>kUSBSleepPortCurrentLimit</key>
+				<integer>2100</integer>
+				<key>kUSBSleepPowerSupply</key>
+				<integer>5100</integer>
+				<key>kUSBWakePortCurrentLimit</key>
+				<integer>2100</integer>
+				<key>kUSBWakePowerSupply</key>
+				<integer>5100</integer>
+			</dict>
+			<key>model</key>
+			<string>MacBookPro14,1</string>
+		</dict>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
