@@ -126,13 +126,9 @@
 			<key>IOProviderMergeProperties</key>
 			<dict>
 				<key>kUSBSleepPortCurrentLimit</key>
-				<integer>2100</integer>
-				<key>kUSBSleepPowerSupply</key>
-				<integer>5100</integer>
+				<integer>3000</integer>
 				<key>kUSBWakePortCurrentLimit</key>
-				<integer>2100</integer>
-				<key>kUSBWakePowerSupply</key>
-				<integer>5100</integer>
+				<integer>3000</integer>
 			</dict>
 			<key>model</key>
 			<string>MacBookPro14,1</string>
