@@ -13,18 +13,74 @@
 			<key>Fixes</key>
 			<dict>
 				<key>FixHPET</key>
-				<false/>
+				<true/>
 				<key>FixIPIC</key>
-				<false/>
+				<true/>
 				<key>FixMutex</key>
-				<false/>
+				<true/>
 				<key>FixRTC</key>
-				<false/>
+				<true/>
 				<key>FixTMR</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
+				<dict>
+					<key>Comment</key>
+					<string>_PRW 0d03</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					DQoD
+					</data>
+					<key>Replace</key>
+					<data>
+					DQoA
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_PRW 0d04</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					DQoE
+					</data>
+					<key>Replace</key>
+					<data>
+					DQoA
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_PRW 6d03</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					bQoD
+					</data>
+					<key>Replace</key>
+					<data>
+					bQoA
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_PRW 6d04</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					bQoE
+					</data>
+					<key>Replace</key>
+					<data>
+					bQoA
+					</data>
+				</dict>
 				<dict>
 					<key>Comment</key>
 					<string>GPRW to XPRW</string>
@@ -37,6 +93,90 @@
 					<key>Replace</key>
 					<data>
 					WFBSVwI=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>KBD to PS2K</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					S0JEXw==
+					</data>
+					<key>Replace</key>
+					<data>
+					UFMySw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>EHC1 to EH01</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>EHC2 to EH02</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					RUhDMg==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUgwMg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_DSM to XDSM</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0RTTQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WERTTQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_OSI to XOSI</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X09TSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WE9TSQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>GFX0 to IGPU</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0ZYMA==
+					</data>
+					<key>Replace</key>
+					<data>
+					SUdQVQ==
 					</data>
 				</dict>
 				<dict>
@@ -69,7 +209,35 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q13 to XQ13(FN+4)</string>
+					<string>_LID to XLID</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X0xJRAA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WExJRAA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_Q2B to _Q2B(TP)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1EyQg==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFEyQg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>_Q13 to XQ13(FN+F4)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -111,114 +279,44 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q16 to XQ16(dualScreen)</string>
+					<string>XSEL to XSEX</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1ExNg==
+					WFNFTAg=
 					</data>
 					<key>Replace</key>
 					<data>
-					WFExNg==
+					WFNFWAg=
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q6A to XQ6A(Microphone)</string>
+					<string>ESEL to ESEX</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1E2QQ==
+					RVNFTAg=
 					</data>
 					<key>Replace</key>
 					<data>
-					WFE2QQ==
+					RVNFWAg=
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>_Q64 to XQ64(Wireless)</string>
+					<string>XWAK to XWAX</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1E2NA==
+					WFdBSwg=
 					</data>
 					<key>Replace</key>
 					<data>
-					WFE2NA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q65 to XQ65(CutScreen)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1E2NQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFE2NQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q66 to XQ66(Settings)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1E2Ng==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFE2Ng==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q60 to XQ60(Bluetooth)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1E2MA==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFE2MA==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q61 to XQ61(Keyboard)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1E2MQ==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFE2MQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>_Q62 to XQ62(Star)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1E2Mg==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFE2Mg==
+					WFdBWAg=
 					</data>
 				</dict>
 				<dict>
@@ -263,13 +361,41 @@
 					WEJJWAM=
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>battery SBMN to BMNX 128</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					U0JNTkA=
+					</data>
+					<key>Replace</key>
+					<data>
+					Qk1OWEA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>battery SBDN to BDNX 128</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					U0JETkA=
+					</data>
+					<key>Replace</key>
+					<data>
+					QkROWEA=
+					</data>
+				</dict>
 			</array>
 			<key>ReuseFFFF</key>
 			<false/>
 			<key>SlpSmiAtWake</key>
-			<false/>
+			<true/>
 			<key>SuspendOverride</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>SSDT</key>
 		<dict>
@@ -288,6 +414,8 @@
 	</dict>
 	<key>Boot</key>
 	<dict>
+		<key>Arguments</key>
+		<string>darkwake=0</string>
 		<key>CustomLogo</key>
 		<string>Alternate</string>
 		<key>Debug</key>
@@ -314,10 +442,26 @@
 	<dict>
 		<key>HDMIInjection</key>
 		<false/>
-		<key>LANInjection</key>
-		<false/>
 		<key>Properties</key>
 		<dict>
+			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
+			<dict>
+				<key>compatible</key>
+				<string>pci8086,a102</string>
+				<key>device-id</key>
+				<data>
+				AqEAAA==
+				</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1f,0x0)</key>
+			<dict>
+				<key>compatible</key>
+				<string>pci8086,9cc1</string>
+				<key>device-id</key>
+				<data>
+				wZwAAA==
+				</data>
+			</dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
 			<dict>
 				<key>layout-id</key>
@@ -328,7 +472,7 @@
 			<key>PciRoot(0x0)/Pci(0x1f,0x6)</key>
 			<dict>
 				<key>name</key>
-				<string>Intel(R) Ethernet Connection (4) I219-V</string>
+				<string>Intel(R) Ethernet Connection (4) I219-LM</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -364,16 +508,20 @@
 				<data>
 				AAAwAQ==
 				</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>
+				AAAAgA==
+				</data>
 			</dict>
 		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<false/>
+			<true/>
 			<key>FixOwnership</key>
-			<false/>
+			<true/>
 			<key>Inject</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>UseIntelHDMI</key>
 		<false/>
@@ -382,10 +530,11 @@
 	<dict>
 		<key>Hide</key>
 		<array>
+			<string>Recovery</string>
 			<string>Preboot</string>
 		</array>
 		<key>Language</key>
-		<string>en:0</string>
+		<string>zh_CN:0</string>
 		<key>Mouse</key>
 		<dict>
 			<key>DoubleClick</key>
@@ -397,8 +546,6 @@
 			<key>Speed</key>
 			<integer>8</integer>
 		</dict>
-		<key>PlayAsync</key>
-		<false/>
 		<key>Scan</key>
 		<dict>
 			<key>Entries</key>
@@ -411,7 +558,7 @@
 			<false/>
 		</dict>
 		<key>ScreenResolution</key>
-		<string>1920x1080</string>
+		<string>1600x900</string>
 		<key>Theme</key>
 		<string>X1Carbon</string>
 	</dict>
@@ -432,84 +579,19 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<false/>
+		<true/>
 		<key>AppleRTC</key>
-		<false/>
+		<true/>
 		<key>Debug</key>
 		<false/>
 		<key>KernelCpu</key>
 		<false/>
 		<key>KernelLapic</key>
-		<false/>
+		<true/>
 		<key>KernelPm</key>
-		<false/>
+		<true/>
 		<key>KernelXCPM</key>
 		<false/>
-	</dict>
-	<key>RtVariables</key>
-	<dict>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
-		<key>ROM</key>
-		<data>
-		6GpkCQTx
-		</data>
-	</dict>
-	<key>SMBIOS</key>
-	<dict>
-		<key>BiosReleaseDate</key>
-		<string>09/13/2019</string>
-		<key>BiosVendor</key>
-		<string>Apple Inc.</string>
-		<key>BiosVersion</key>
-		<string>MBP141.88Z.F000.B00.1909131925</string>
-		<key>Board-ID</key>
-		<string>Mac-B4831CEBD52A0C4C</string>
-		<key>BoardManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02705310J9HWVPJA</string>
-		<key>BoardType</key>
-		<integer>10</integer>
-		<key>BoardVersion</key>
-		<string>1.0</string>
-		<key>ChassisAssetTag</key>
-		<string>MacBook-Aluminum</string>
-		<key>ChassisManufacturer</key>
-		<string>Apple Inc.</string>
-		<key>ChassisType</key>
-		<string>0x09</string>
-		<key>EfiVersion</key>
-		<string>202.0.0.0.0</string>
-		<key>Family</key>
-		<string>MacBook Pro</string>
-		<key>FirmwareFeatures</key>
-		<string>0xFC0FE137</string>
-		<key>FirmwareFeaturesMask</key>
-		<string>0xFF1FFF3F</string>
-		<key>LocationInChassis</key>
-		<string>Part Component</string>
-		<key>Manufacturer</key>
-		<string>Apple Inc.</string>
-		<key>Mobile</key>
-		<true/>
-		<key>PlatformFeature</key>
-		<string>0x1A</string>
-		<key>ProductName</key>
-		<string>MacBookPro14,1</string>
-		<key>SerialNumber</key>
-		<string>C02T6KZXHV29</string>
-		<key>SmUUID</key>
-		<string>D6B7373F-0BE6-46FF-9872-1F0B3BF9596C</string>
-		<key>Version</key>
-		<string>1.0</string>
-	</dict>
-	<key>SystemParameters</key>
-	<dict>
-		<key>InjectKexts</key>
-		<string>Detect</string>
-		<key>InjectSystemID</key>
-		<true/>
 	</dict>
 </dict>
 </plist>
