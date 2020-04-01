@@ -25,6 +25,8 @@
 		</array>
 		<key>Quirks</key>
 		<dict>
+			<key>SignalAppleOS</key>
+			<false/>
 			<key>EnableWriteUnprotector</key>
 			<true/>
 			<key>EnableSafeModeSlide</key>
@@ -32,6 +34,8 @@
 			<key>AvoidRuntimeDefrag</key>
 			<true/>
 			<key>ProtectCsmRegion</key>
+			<false/>
+			<key>ProtectSecureBoot</key>
 			<false/>
 			<key>DiscardHibernateMap</key>
 			<false/>
@@ -55,41 +59,43 @@
 	<dict>
 		<key>Security</key>
 		<dict>
+			<key>AllowSetDefault</key>
+			<false/>
+			<key>AuthRestart</key>
+			<false/>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>AllowNvramReset</key>
 			<true/>
-			<key>RequireSignature</key>
-			<false/>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
-			<key>RequireVault</key>
-			<false/>
 			<key>ExposeSensitiveData</key>
 			<integer>7</integer>
+			<key>Vault</key>
+			<string>Optional</string>
 		</dict>
 		<key>Boot</key>
 		<dict>
-			<key>Resolution</key>
-			<string></string>
-			<key>UsePicker</key>
-			<true/>
+			<key>PickerMode</key>
+			<string>Builtin</string>
+			<key>PickerAudioAssist</key>
+			<false/>
 			<key>PollAppleHotKeys</key>
 			<true/>
 			<key>HideSelf</key>
 			<true/>
-			<key>ConsoleMode</key>
-			<string></string>
 			<key>ShowPicker</key>
 			<false/>
+			<key>TakeoffDelay</key>
+			<integer>0</integer>
 			<key>HibernateMode</key>
 			<string>None</string>
-			<key>ConsoleBehaviourOs</key>
-			<string></string>
+			<key>HideAuxiliary</key>
+			<false/>
 			<key>Timeout</key>
 			<integer>5</integer>
-			<key>ConsoleBehaviourUi</key>
-			<string></string>
+			<key>PickerAttributes</key>
+			<integer>0</integer>
 		</dict>
 		<key>Tools</key>
 		<array>
@@ -125,6 +131,8 @@
 				<string>CustomOS</string>
 				<key>Arguments</key>
 				<string></string>
+				<key>Auxiliary</key>
+				<false/>
 				<key>Enabled</key>
 				<false/>
 				<key>Comment</key>
@@ -160,7 +168,13 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>AppleXcpmForceBoost</key>
+			<false/>
+			<key>IncreasePciBarSize</key>
+			<false/>
 			<key>DisableIoMapper</key>
+			<false/>
+			<key>DummyPowerManagement</key>
 			<false/>
 			<key>AppleCpuPmCfgLock</key>
 			<false/>
@@ -334,22 +348,6 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>BundlePath</key>
-				<string>USBPorts.kext</string>
-				<key>Comment</key>
-				<string>USB Ports</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext</string>
 				<key>Comment</key>
 				<string>VoodooPS2Controller</string>
@@ -398,6 +396,22 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>BundlePath</key>
+				<string>VoodooPS2Controller.kext/Contents/Plugins/VoodooPS2Keyboard.kext</string>
+				<key>Comment</key>
+				<string>Keyboard</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/VoodooPS2Keyboard</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>BundlePath</key>
 				<string>VoodooInput.kext</string>
 				<key>Comment</key>
 				<string>VoodooInput</string>
@@ -414,13 +428,13 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>BundlePath</key>
-				<string>VoodooPS2Controller.kext/Contents/Plugins/VoodooPS2Keyboard.kext</string>
+				<string>USBPorts.kext</string>
 				<key>Comment</key>
-				<string>Keyboard</string>
+				<string>USB Ports</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/VoodooPS2Keyboard</string>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -428,6 +442,10 @@
 	</dict>
 	<key>NVRAM</key>
 	<dict>
+		<key>WriteFlash</key>
+		<false/>
+		<key>LegacyOverwrite</key>
+		<false/>
 		<key>LegacyEnable</key>
 		<false/>
 		<key>LegacySchema</key>
@@ -471,7 +489,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>keepsyms=1</string>
+				<string></string>
 				<key>nvda_drv</key>
 				<data>MQ==</data>
 				<key>prev-lang:kbd</key>
@@ -488,11 +506,30 @@
 	</dict>
 	<key>UEFI</key>
 	<dict>
+		<key>Audio</key>
+		<dict>
+			<key>AudioSupport</key>
+			<false/>
+			<key>AudioDevice</key>
+			<string>0</string>
+			<key>AudioCodec</key>
+			<integer>0</integer>
+			<key>AudioOut</key>
+			<integer>0</integer>
+			<key>MinimumVolume</key>
+			<integer>20</integer>
+			<key>PlayChime</key>
+			<false/>
+			<key>VolumeAmplifier</key>
+			<integer>0</integer>
+		</dict>
 		<key>ConnectDrivers</key>
 		<true/>
 		<key>Protocols</key>
 		<dict>
 			<key>DataHub</key>
+			<false/>
+			<key>AppleAudio</key>
 			<false/>
 			<key>AppleUserInterfaceTheme</key>
 			<false/>
@@ -502,7 +539,11 @@
 			<false/>
 			<key>AppleEvent</key>
 			<false/>
+			<key>AppleSmcIo</key>
+			<true/>
 			<key>HashServices</key>
+			<false/>
+			<key>OSInfo</key>
 			<false/>
 			<key>AppleKeyMap</key>
 			<false/>
@@ -510,27 +551,15 @@
 			<false/>
 			<key>AppleBootPolicy</key>
 			<false/>
-			<key>ConsoleControl</key>
-			<false/>
 			<key>DeviceProperties</key>
 			<false/>
 		</dict>
 		<key>Quirks</key>
 		<dict>
-			<key>SanitiseClearScreen</key>
-			<false/>
-			<key>IgnoreTextInGraphics</key>
-			<false/>
 			<key>IgnoreInvalidFlexRatio</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
-			<key>AvoidHighAlloc</key>
-			<false/>
-			<key>ProvideConsoleGop</key>
-			<false/>
-			<key>ReconnectOnResChange</key>
-			<false/>
 			<key>RequestBootVarFallback</key>
 			<false/>
 			<key>RequestBootVarRouting</key>
@@ -538,10 +567,6 @@
 			<key>UnblockFsConnect</key>
 			<false/>
 			<key>ReleaseUsbOwnership</key>
-			<false/>
-			<key>ClearScreenOnModeSwitch</key>
-			<false/>
-			<key>ReplaceTabWithSpace</key>
 			<false/>
 		</dict>
 		<key>Input</key>
@@ -563,12 +588,34 @@
 			<key>PointerSupport</key>
 			<false/>
 		</dict>
+		<key>Output</key>
+		<dict>
+			<key>TextRenderer</key>
+			<string>BuiltinGraphics</string>
+			<key>ConsoleMode</key>
+			<string></string>
+			<key>Resolution</key>
+			<string>Max</string>
+			<key>ClearScreenOnModeSwitch</key>
+			<false/>
+			<key>IgnoreTextInGraphics</key>
+			<false/>
+			<key>ProvideConsoleGop</key>
+			<true/>
+			<key>DirectGopRendering</key>
+			<false/>
+			<key>ReconnectOnResChange</key>
+			<false/>
+			<key>ReplaceTabWithSpace</key>
+			<false/>
+			<key>SanitiseClearScreen</key>
+			<false/>
+		</dict>
 		<key>Drivers</key>
 		<array>
-			<string>UsbKbDxe.efi</string>
+			<string>AppleUsbKbDxe.efi</string>
 			<string>ApfsDriverLoader.efi</string>
 			<string>FwRuntimeServices.efi</string>
-			<string>VirtualSmc.efi</string>
 			<string>HFSPlus.efi</string>
 		</array>
 	</dict>
