@@ -29,6 +29,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PTSWAK", 0x00000000)
     External (_SB_.LID_, DeviceObj)
     External (_SB_.PCI0.LPCB.LID0, DeviceObj)
     External (_SB_.PCI0.LPCB.LID_, DeviceObj)
+    External (_SB_.PCI0.XHC_.PMEE, FieldUnitObj)
     External (_SI_._SST, MethodObj)    // 1 Arguments
     External (EXT1, MethodObj)    // 1 Arguments
     External (EXT2, MethodObj)    // 1 Arguments
@@ -63,45 +64,46 @@ DefinitionBlock ("", "SSDT", 2, "hack", "PTSWAK", 0x00000000)
 
         Return (XPRW (Arg0, Arg1))
     }
-
-    Method (EXT4, 1, NotSerialized)
+    
+    Method (EXT1, 1, NotSerialized) // Fix Shutdown
     {
-        If (_OSI ("Darwin"))
+        If ((5 == Arg0) && CondRefOf (\_SB.PCI0.XHC.PMEE)) {
+            \_SB.PCI0.XHC.PMEE = 0
+        }
+    }
+
+    Method (EXT4, 1, NotSerialized) // Fix Screen wake up
+    {
+        If ((0x03 == Arg0))
         {
-            If ((0x03 == Arg0))
+            If (CondRefOf (\_SB.LID))
             {
-                If (CondRefOf (\_SB.LID))
-                {
-                    Notify (\_SB.LID, 0x80) // Status Change
-                }
+                Notify (\_SB.LID, 0x80) // Status Change
+            }
 
-                If (CondRefOf (\_SB.LID0))
-                {
-                    Notify (\_SB.LID0, 0x80) // Status Change
-                }
+            If (CondRefOf (\_SB.LID0))
+            {
+                Notify (\_SB.LID0, 0x80) // Status Change
+            }
 
-                If (CondRefOf (\_SB.PCI0.LPCB.LID))
-                {
-                    Notify (\_SB.PCI0.LPCB.LID, 0x80) // Status Change
-                }
+            If (CondRefOf (\_SB.PCI0.LPCB.LID))
+            {
+                Notify (\_SB.PCI0.LPCB.LID, 0x80) // Status Change
+            }
 
-                If (CondRefOf (\_SB.PCI0.LPCB.LID0))
-                {
-                    Notify (\_SB.PCI0.LPCB.LID0, 0x80) // Status Change
-                }
+            If (CondRefOf (\_SB.PCI0.LPCB.LID0))
+            {
+                Notify (\_SB.PCI0.LPCB.LID0, 0x80) // Status Change
             }
         }
     }
 
-    Method (EXT3, 1, NotSerialized)
+    Method (EXT3, 1, NotSerialized) // Fix LED wake up
     {
-        If (_OSI ("Darwin"))
+        If ((0x03 == Arg0))
         {
-            If ((0x03 == Arg0))
-            {
-                \_SI._SST (One)
-            }
-        }
+            \_SI._SST (One)
+        }        
     }
 
     Scope (_SB)
