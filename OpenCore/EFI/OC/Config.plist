@@ -67,6 +67,8 @@
 			<false/>
 			<key>AuthRestart</key>
 			<false/>
+			<key>BlacklistAppleUpdate</key>
+			<true/>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>AllowNvramReset</key>
@@ -89,8 +91,6 @@
 			<key>PickerAudioAssist</key>
 			<false/>
 			<key>PollAppleHotKeys</key>
-			<true/>
-			<key>HideSelf</key>
 			<true/>
 			<key>ShowPicker</key>
 			<false/>
@@ -151,6 +151,8 @@
 		</array>
 		<key>Debug</key>
 		<dict>
+			<key>ApplePanic</key>
+			<false/>
 			<key>DisplayLevel</key>
 			<integer>2147483650</integer>
 			<key>AppleDebug</key>
@@ -159,6 +161,8 @@
 			<integer>0</integer>
 			<key>Target</key>
 			<integer>19</integer>
+			<key>SysReport</key>
+			<false/>
 			<key>DisableWatchDog</key>
 			<false/>
 		</dict>
@@ -501,7 +505,7 @@
 				<string>prev-lang:kbd</string>
 			</array>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
@@ -601,14 +605,16 @@
 		</dict>
 		<key>Quirks</key>
 		<dict>
+			<key>DeduplicateBootOrder</key>
+			<true/>
 			<key>IgnoreInvalidFlexRatio</key>
 			<false/>
 			<key>ExitBootServicesDelay</key>
 			<integer>0</integer>
-			<key>RequestBootVarFallback</key>
-			<false/>
 			<key>RequestBootVarRouting</key>
 			<true/>
+			<key>TscSyncTimeout</key>
+			<integer>0</integer>
 			<key>UnblockFsConnect</key>
 			<false/>
 			<key>ReleaseUsbOwnership</key>
@@ -651,8 +657,6 @@
 			<true/>
 			<key>DirectGopRendering</key>
 			<false/>
-			<key>DirectGopCacheMode</key>
-			<string></string>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -712,12 +716,12 @@
 				<string>Intel(R) Ethernet Connection (4) I219-V</string>
 			</dict>
 		</dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<dict/>
 	</dict>
 	<key>ACPI</key>
 	<dict>
-		<key>Block</key>
+		<key>Delete</key>
 		<array>
 			<dict>
 				<key>TableLength</key>
