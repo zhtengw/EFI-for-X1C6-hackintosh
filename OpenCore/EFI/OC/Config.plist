@@ -695,6 +695,12 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
+				<key>force-online</key>
+				<data>AQAAAA==</data>
+				<key>complete-modeset</key>
+				<data>AQAAAA==</data>
+				<key>complete-modeset-framebuffers</key>
+				<data>AAAAAAAAAAE=</data>
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAWWQ==</data>
 				<key>device-id</key>
