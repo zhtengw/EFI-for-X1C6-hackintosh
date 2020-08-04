@@ -45,6 +45,8 @@
 			<false/>
 			<key>ProvideCustomSlide</key>
 			<false/>
+			<key>ProvideMaxSlide</key>
+			<integer>0</integer>
 			<key>RebuildAppleMemoryMap</key>
 			<false/>
 			<key>DisableSingleUser</key>
@@ -67,8 +69,6 @@
 			<false/>
 			<key>AuthRestart</key>
 			<false/>
-			<key>BlacklistAppleUpdate</key>
-			<true/>
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>AllowNvramReset</key>
@@ -161,6 +161,8 @@
 			<integer>0</integer>
 			<key>Target</key>
 			<integer>19</integer>
+			<key>SerialInit</key>
+			<false/>
 			<key>SysReport</key>
 			<false/>
 			<key>DisableWatchDog</key>
@@ -542,6 +544,8 @@
 		<dict>
 			<key>EnableJumpstart</key>
 			<true/>
+			<key>GlobalConnect</key>
+			<false/>
 			<key>HideVerbose</key>
 			<true/>
 			<key>JumpstartHotPlug</key>
@@ -585,6 +589,8 @@
 			<key>FirmwareVolume</key>
 			<false/>
 			<key>AppleEvent</key>
+			<false/>
+			<key>AppleFramebufferInfo</key>
 			<false/>
 			<key>AppleSmcIo</key>
 			<true/>
@@ -662,6 +668,8 @@
 			<key>ReplaceTabWithSpace</key>
 			<false/>
 			<key>SanitiseClearScreen</key>
+			<false/>
+			<key>UgaPassThrough</key>
 			<false/>
 		</dict>
 		<key>Drivers</key>
