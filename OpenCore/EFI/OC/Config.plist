@@ -80,7 +80,7 @@
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
-			<string>Default</string>
+			<string>Disabled</string>
 			<key>DmgLoading</key>
 			<string>Signed</string>
 			<key>EnablePassword</key>
@@ -189,10 +189,16 @@
 		<array/>
 		<key>Emulate</key>
 		<dict>
+			<key>DummyPowerManagement</key>
+			<false/>
 			<key>Cpuid1Data</key>
 			<data></data>
 			<key>Cpuid1Mask</key>
 			<data></data>
+			<key>MaxKernel</key>
+			<string></string>
+			<key>MinKernel</key>
+			<string></string>
 		</dict>
 		<key>Force</key>
 		<array/>
@@ -208,13 +214,17 @@
 			<true/>
 			<key>DisableRtcChecksum</key>
 			<false/>
-			<key>DummyPowerManagement</key>
+			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>AppleCpuPmCfgLock</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
 			<false/>
+			<key>ForceSecureBootScheme</key>
+			<false/>
 			<key>LapicKernelPanic</key>
+			<false/>
+			<key>LegacyCommpage</key>
 			<false/>
 			<key>AppleXcpmExtraMsrs</key>
 			<false/>
@@ -724,6 +734,8 @@
 			<true/>
 			<key>DirectGopRendering</key>
 			<false/>
+			<key>ForceResolution</key>
+			<false/>
 			<key>ReconnectOnResChange</key>
 			<false/>
 			<key>ReplaceTabWithSpace</key>
@@ -744,6 +756,8 @@
 			<dict>
 				<key>Address</key>
 				<integer>268435456</integer>
+				<key>Type</key>
+				<string>Reserved</string>
 				<key>Comment</key>
 				<string>HD3000: IGPU memory corruption errata</string>
 				<key>Enabled</key>
@@ -1345,10 +1359,16 @@
 			<string>C02T6KZXHV29</string>
 			<key>SystemProductName</key>
 			<string>MacBookPro14,1</string>
+			<key>SystemMemoryStatus</key>
+			<string>Auto</string>
 			<key>SystemUUID</key>
 			<string>D6B7373F-0BE6-46FF-9872-1F0B3BF9596C</string>
 			<key>SpoofVendor</key>
 			<true/>
+			<key>AdviseWindows</key>
+			<false/>
+			<key>ProcessorType</key>
+			<integer>0</integer>
 			<key>ROM</key>
 			<data>atHQ+Vls</data>
 			<key>MLB</key>
@@ -1358,6 +1378,8 @@
 		<true/>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>UpdateSMBIOS</key>
 		<true/>
 		<key>UpdateDataHub</key>
